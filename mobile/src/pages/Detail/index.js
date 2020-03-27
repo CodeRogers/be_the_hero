@@ -4,7 +4,7 @@ import{ useNavigation, useRoute } from '@react-navigation/native';
 import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 import * as MailComposer from 'expo-mail-composer';
 
-import logoImg from '../../assets/logo.png'
+import logoImg from '../../assets/logo.png';
 import styles from './styles';
 
 export default function Detail() {
@@ -12,7 +12,11 @@ export default function Detail() {
     const route = useRoute();
 
     const incident = route.params.incident;
-    const message = `Olá ${incident.name}, estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" com o valor de ${Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(incident.value)}`;
+    const message = `Olá ${incident.name}, 
+        estou entrando em contato pois gostaria de ajudar no caso "${incident.title}" 
+        com o valor de ${Intl.NumberFormat('pt-BR', { 
+            style: 'currency', currency: 'BRL' 
+        }).format(incident.value)}`;
 
     function navigateBack() {
         navigation.goBack();
@@ -23,7 +27,7 @@ export default function Detail() {
             subject: `Herói do caso: ${incident.title}`,
             recipients: [incident.email],
             body: message,
-        })
+        });
     }
 
     function sendWhatsApp() {
