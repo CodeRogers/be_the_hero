@@ -54,7 +54,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directiory: './src/database/migrations'
+      scandir: './src/database/migrations'
     }
   }
 
