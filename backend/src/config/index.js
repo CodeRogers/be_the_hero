@@ -5,7 +5,7 @@ module.exports = {
     port: process.env.PORT || 3333,
     dbhost: process.env.POSTGRES_DBHOST,
     dbname: process.env.POSTGRES_DBNAME,
-    dbport: process.env.POSTGERS_PORT,
-    dbuser: process.env.POSTGERS_USER,
-    dbpwd: process.env.POSTGERS_PASSWORD,
+    dbport: process.env.POSTGRES_PORT,
+    dbuser: process.env.POSTGRES_USER,
+    dbpwd: process.env.POSTGRES_PASSWORD,
 };
