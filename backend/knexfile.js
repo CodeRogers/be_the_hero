@@ -54,9 +54,7 @@ module.exports = {
       max: 10
     },
     migrations: {
-      directiory: './src/database/migrations'
-    },
-    useNullAsDefault: true,
+      directory: './src/database/migrations'
+    }
   }
-
 };
