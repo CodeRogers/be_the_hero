@@ -43,16 +43,17 @@ module.exports = {
   production: {
     client: 'postgresql',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      host: config.dbhost,
+      database: config.dbname,
+      user: config.dbuser,
+      password: config.dbpwd
     },
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      directiory: './src/database/migrations'
     }
   }
 
